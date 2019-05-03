@@ -3,7 +3,7 @@
 </h2>
 
 <div>
-  <h3>Using style.color</h3>
+  <h3>Using style</h3>
   <ul *ngFor="let item of list; let i = index">
     <li [style.color]="item.color">
       <button 
@@ -30,6 +30,7 @@
     </li>
   </ul>
 
+
   <button (click)="changeSize(5)">Increase height</button>
   <button (click)="changeSize(-5)">Decrease height</button>
 
@@ -42,8 +43,10 @@
   <h3>className</h3>
   <button (click)="changeClass()"> Change button class </button>
 
-  <button [disabled]="true" [className]="buttonRed === true ? 'button red' : 'button green' "> button1 </button>
-  <button [disabled]="true" [className]="buttonRed === false ? 'button red' : 'button green' "> button2 </button>
+  <button [className]="buttonRed === true ? 'button red' : 'button green' " 
+  [disabled]="true" > button1 </button>
+  <button [className]="buttonRed === false ? 'button red' : 'button green' "
+  [disabled]="true" > button2 </button>
 
   <h3>ngClass</h3>
   <div [ngClass]="['text-bold', 'text-red']">array of classes</div>

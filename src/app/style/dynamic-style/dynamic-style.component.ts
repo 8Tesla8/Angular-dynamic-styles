@@ -35,16 +35,18 @@ export class DynamicStyleComponent implements OnInit {
     });
   }
 
-  public buttonRed= false;
-  public changeClass(): void{
-    this.buttonRed = !this.buttonRed;
-  }
-
   public changeSize(value: number): void{
     this.list.forEach(element => {
       element.height += value;
     });
   }
+
+  
+  public buttonRed= false;
+  public changeClass(): void{
+    this.buttonRed = !this.buttonRed;
+  }
+
 
   ngOnInit() {
   }
